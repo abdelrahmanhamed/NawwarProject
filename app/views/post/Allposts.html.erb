@@ -1,0 +1,8 @@
+<%@posts.each do |p| %>
+	<div style="border: solid;">
+	<%=p.user.fname + " " + p.user.lname%> :
+	<%=p.content%>
+	</div>
+
+<%end%>
+<li><a><%= link_to 'Home', root_path %></a></li>

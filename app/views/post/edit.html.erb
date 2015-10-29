@@ -1,0 +1,12 @@
+<%= form_for :post ,:url => {:action => 'editPost' , :id => params[:id]} do  |post| %>
+
+  <p>
+    <%= post.label :content, " Edit Your Content:" %>
+    <%= post.text_area :content  %>
+  </p>
+
+  <p class='buttons'>
+    <%= post.submit "Go" %>
+  </p>
+
+<% end %>

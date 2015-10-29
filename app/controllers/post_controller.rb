@@ -1,8 +1,10 @@
 class PostController < ApplicationController
-	def index
+	def Myposts
 		@posts =current_user.posts.all
 	end
-
+	def Allposts
+		@posts=Post.all
+	end
 	def new 
 		if user_signed_in?
 			@post=current_user.posts.new
@@ -22,14 +24,16 @@ class PostController < ApplicationController
    		end
 	end
 
-	def edit
-		@post = current_user.posts.find(params[:id])
-		@post.update_attribute(:content,prams[:content])
+	def editPost
+		@post = Post.find(params[:id])
+		@post.update_attributes(post_params)
+		redirect_to (root_path)
 	end
 
 	def delete
-		@post = current_user.posts.find(params[:id])
+		@post = Post.find(params[:id])
 		@post.delete 
+		redirect_to (root_path)
 	end
   	private
   	def post_params
