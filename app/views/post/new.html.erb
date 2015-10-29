@@ -1,4 +1,4 @@
-<%= form_for @post ,:url => {:action => 'create'} do  |post| %>
+<%= form_for :post ,:url => {:action => 'create'} do  |post| %>
 
   <p>
     <%= post.label :content, "Your Content:" %>

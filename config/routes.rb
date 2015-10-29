@@ -8,8 +8,11 @@ Rails.application.routes.draw do
     get 'post/create'
     post 'post/create'
     get 'post/new'
-    get 'post/index'
-    post 'post/index'
+    get 'post/edit'
+    post 'post/edit'
+    get 'post/Allposts'
+    get 'post/Myposts'
+    post 'post/Myposts'
     # get 'user/sign_out' => 'post#HomePage'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,7 +1,9 @@
 <%if user_signed_in? %>
 <li><a><%= link_to 'Post',{:action => 'new'} %></a></li>
+<li><a><%= link_to 'Posts Timeline',{:action => 'Allposts'} %></a></li>
 <li><a><%= link_to 'Sign out', destroy_user_session_path,:method => 'delete' %></a></li>
-<li><a><%= link_to 'My Posts', {:action => 'index'} %></a></li>
+<li><a><%= link_to 'Edit Profile', edit_user_registration_path %></a></li>
+<li><a><%= link_to 'My Posts', {:action => 'Myposts'} %></a></li>
 <%else%>
 <li><a><%= link_to 'Sign up', new_user_registration_path %></a></li>
 <li><a><%= link_to 'Sign in ', new_user_session_path %></a></li>
