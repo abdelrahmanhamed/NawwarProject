@@ -1,4 +1,5 @@
 <%@posts.each do |p| %>
 <div style="border: solid;"><%=p.content%></div>
 <li><a><%= link_to 'Edit Post',{:action => 'edit', :id => p.id} %></a></li>
+<li><a><%= link_to 'Delete Post',{:action => 'delete', :id => p.id} %></a></li>
 <%end%>

@@ -24,14 +24,16 @@ class PostController < ApplicationController
    		end
 	end
 
-	def edit
+	def editPost
 		@post = Post.find(params[:id])
 		@post.update_attributes(:content=>params[:content])
+		redirect_to (root_path)
 	end
 
 	def delete
 		@post = Post.find(params[:id])
 		@post.delete 
+		redirect_to (root_path)
 	end
   	private
   	def post_params
