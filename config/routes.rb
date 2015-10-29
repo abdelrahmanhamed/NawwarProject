@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     root 'post#HomePage'
     get 'post/create'
     post 'post/create'
+    get 'post/new'
+    get 'post/index'
+    post 'post/index'
     # get 'user/sign_out' => 'post#HomePage'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
