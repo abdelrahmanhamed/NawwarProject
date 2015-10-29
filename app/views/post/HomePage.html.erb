@@ -1,4 +1,6 @@
 <%if user_signed_in? %>
+<%= image_tag current_user.img %>
+<%= current_user.fname + " " + current_user.lname%>
 <li><a><%= link_to 'Post',{:action => 'new'} %></a></li>
 <li><a><%= link_to 'Posts Timeline',{:action => 'Allposts'} %></a></li>
 <li><a><%= link_to 'Sign out', destroy_user_session_path,:method => 'delete' %></a></li>
