@@ -7,7 +7,18 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
-
+  <div class="field">
+    <%= f.label :FirstName %><br />
+    <%= f.text_field :fname, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :LastName %><br />
+    <%= f.text_field :lname, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :ProfilePicture %><br />
+    <%= f.file_field :img, autofocus: true %>
+  </div>
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
