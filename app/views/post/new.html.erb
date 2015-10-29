@@ -4,9 +4,11 @@
     <%= post.label :content, "Your Content:" %>
     <%= post.text_area :content %>
   </p>
-
+  	<%= post.label :Picture %>
+    <%= post.file_field :img, autofocus: true %>
   <p class='buttons'>
     <%= post.submit "Go" %>
   </p>
 
 <% end %>
+<li><a><%= link_to 'Home', root_path %></a></li>

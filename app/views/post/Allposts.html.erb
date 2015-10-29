@@ -1,6 +1,7 @@
 <%@posts.each do |p| %>
 	<div style="border: solid;">
 	<%=p.user.fname + " " + p.user.lname%> :
+	<%= image_tag p.img %>
 	<%=p.content%>
 	</div>
 
