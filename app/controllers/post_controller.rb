@@ -26,7 +26,7 @@ class PostController < ApplicationController
 
 	def editPost
 		@post = Post.find(params[:id])
-		@post.update_attributes(:content=>params[:content])
+		@post.update_attributes(post_params)
 		redirect_to (root_path)
 	end
 
